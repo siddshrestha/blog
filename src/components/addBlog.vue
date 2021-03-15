@@ -17,6 +17,10 @@
               <input type="checkbox" value="supersoldiers" v-model="blog.categories"/>
               
           </div>
+          <label>Author:</label>
+          <select v-model="blog.author">
+              <option v-for="author in authors">{{ author }}</option>
+          </select>
       </form>
 
       <div id="preview">
@@ -28,6 +32,7 @@
           <ul>
               <li v-for="category in blog.categories">{{ category }}</li>
           </ul>
+          <p>author: {{ blog.author }}</p>
       </div>
   </div>
 </template>
@@ -40,8 +45,10 @@ export default {
         blog: {
             title: "",
         content: "",
-        categories: []
-        }
+        categories: [],
+        author: ""
+        },
+        authors:['Haruki Murakami', 'Khalid Hosseini', 'Chetan Bhagat']
         
     }
   }
