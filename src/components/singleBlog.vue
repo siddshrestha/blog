@@ -19,6 +19,13 @@ export default {
             console.log(data);
             this.blog = data.body;
         });
-    },
+    }
 }
 </script>
+
+<style>
+    #single-blog{
+        max-width: 960px;
+        margin: 0 auto;
+    }
+</style>
